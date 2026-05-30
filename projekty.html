@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Projekty - Emka Studio</title>
+</head>
+<body>
+
+<a href="index.html">Strona główna</a> |
+<a href="teksty.html">Teksty</a> |
+<a href="historia.html">Historia</a> |
+<a href="projekty.html">Lost media</a>
+
+<br><br>
+
+<input type="text" id="szukaj" placeholder="Szukaj po tytule...">
+
+<hr>
+
+<h1>Lost Media</h1>
+
+<h5>Tu zostały zapisane najważniejsze lost media, które podkreśliły moje zainteresowanie.</h5>
+<h5>Reszta została opisana przez grono osob z reddita na arkuszu google</h5>
+
+<div id="lista">
+
+<p><a href="ls.html">Ludzie.</a></p>
+
+<p><a href="ls1.html">Jak stworzyć własną przeróbke</a></p>
+
+<p><a href="ls2.html">Budka Suflera - Plastykowe Serce</a></p>
+
+<p><a href="ls3.html">Ortogra</a></p>
+
+<p><a href="ls4.html">Eureka</a></p>
+
+<p><a href="ls5.html">Gry przeglądarkowe Naszej-Klasy</a></p>
+
+<p><a href="ls6.html">"Dopóki nie skorzystałem z Internetu, nie wiedziałem, że na świecie jest tylu idiotów"</a></p>
+
+<p><a href="ls7.html">MisZOgonem</a></p>
+
+<p><a href="ls8.html">Raz Lepiej raz Gorzej</a></p>
+
+<p><a href="ls9.html">Softeczka</a></p>
+
+<p><a href="ls10.html">BorbobTV (usunięte filmy)</a></p>
+
+<p><a href="ls11.html">Ni mom pojęcia co robię (stare odcinki)</a></p>
+
+<p><a href="ls12.html">666 Specjal</a></p>
+
+<p><a href="ls13.html">Dylemat Naszoklasisty / Nasza-Klasa Story (Znajoma 27)</a></p>
+
+<p><a href="ls14.html">Pivot990</a></p>
+
+<p><a href="ls15.html">Defekt Muzgó - Jarocin '91</a></p>
+
+<p><a href="ls16.html">Teatr Muzyczny "HALS" - Rap na budowie</a></p>
+
+<p><a href="ls17.html">dowcipas.pl</a></p>
+
+<p><a href="ls18.html">Serwer PKM</a></p>
+
+</div>
+
+<script>
+document.getElementById("szukaj").addEventListener("keyup", function() {
+    let tekst = this.value.toLowerCase();
+    let wpisy = document.querySelectorAll("#lista p");
+
+    wpisy.forEach(function(wpis) {
+        if (wpis.textContent.toLowerCase().includes(tekst)) {
+            wpis.style.display = "";
+        } else {
+            wpis.style.display = "none";
+        }
+    });
+});
+</script>
+
+</body>
+</html>
